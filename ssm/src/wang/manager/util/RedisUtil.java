@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -1703,4 +1704,28 @@ public final class RedisUtil {
 			jedis.close();
 		}
 	}
+	/*UserInfoBean uib = AUCenterUtils.ConvertMsgToBean(rrb
+								.getMSG(), UserInfoBean.class);
+						gulr.setAccountID(uib.getID());
+						gulr.setNormalAccount(uib.getNormalAccount());
+						UserCacheBeans uc = new UserCacheBeans();
+						uc.setUSERID(gulr.getAccountID());
+						uc.setWebUserBean(gulr);
+						uc.setUSERIP(AUCenterUtils.GetUserIPAddress(request));
+						uc.setUserBrowserAtrr(request.getHeader("User-Agent"));
+						RedisUtil.setex(AUCenterUtils.GetWebSiteConfig()
+								.getCachedTitle()
+								+ uc.getUSERID(), JSONUtil.beanToJson(uc),
+								AUCenterUtils.GetWebSiteConfig()
+										.getRedisCacheTime());
+						CookieUtils.SetCookie(response, AUCenterUtils
+								.GetWebSiteConfig().getUserCookiesKey(), RC4
+								.encry_RC4_string(CookieUtils
+										.EncodeCookie(new String[] {
+												uc.getUSERID().toString(),
+												uc.getUSERIP(),
+												uc.getUserBrowserAtrr() }),
+										AUCenterUtils.GetWebSiteConfig()
+												.getRC4Key()), AUCenterUtils
+								.GetWebSiteConfig().getCookieAgeTime());*/
 }
