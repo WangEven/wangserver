@@ -13,7 +13,8 @@
 	<constant name="struts.ognl.allowStaticMethodAccess" value="false" />
 	<!-- 模版缓存 -->
 	<constant name="struts.freemarker.templatesCache" value="true" />
-
+	<!-- 整合spring -->
+	<constant name="struts.objectFactory" value="spring" />
 	<!--
 		设置上传的大小限制 <constant name="struts.multipart.maxSize" value="900000000"
 		/>
@@ -25,7 +26,7 @@
 		设置action的后缀 <constant name="struts.action.extension" value="" />
 	-->
 	<!--
-		整合spring配置 <comstant name="struts.objectFactory" value="spring"/>
+		整合spring配置 
 	-->
 	<!--
 		<result type="dispatcher"></result>默认type,服务器跳转页面 <result

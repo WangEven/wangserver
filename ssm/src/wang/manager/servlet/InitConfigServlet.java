@@ -5,6 +5,8 @@ import javax.servlet.http.HttpServlet;
 
 import org.apache.log4j.Logger;
 
+
+import wang.manager.util.RedisUtil;
 import wang.manager.util.WeblogicUtil;
 
 public class InitConfigServlet extends HttpServlet {
@@ -32,6 +34,12 @@ public class InitConfigServlet extends HttpServlet {
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
+		}
+		try {
+			RedisUtil.initPool();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
 		}
 	}
 
